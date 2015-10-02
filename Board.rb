@@ -1,5 +1,6 @@
 require_relative "square"
 require 'byebug'
+require "yaml"
 class Board
   SQUARE_DELTAS = [
     [-1,1],
@@ -85,9 +86,6 @@ class Board
       end
     end
   end
-
-
-
 
   def render
     system("clear")

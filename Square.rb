@@ -16,9 +16,7 @@ class Square
     @revealed = true
   end
 
-  def inspect
-    return value
-  end
+  
   def flag
     @flagged ? @flagged = false : @flagged = true
   end
