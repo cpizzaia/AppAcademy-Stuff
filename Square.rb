@@ -43,7 +43,8 @@ class Square
   end
 
   def add_child(node)
-    node.parent = self
+    #node.parent = self
+    @children << node
   end
 
   def remove_child(node)
