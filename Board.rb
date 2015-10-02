@@ -1,6 +1,5 @@
 require_relative "square"
 class Board
-
   def initialize(size = 4,num_bombs = 8)
     @grid = Array.new(size) {Array.new(size) {Square.new(' ')}}
     place_bombs(num_bombs)
