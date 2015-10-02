@@ -12,21 +12,58 @@ class Board
     [1,-1]
   ]
   BOMB = "*"
+  attr_reader :result
   def initialize(size = 4,num_bombs = 8)
     @grid = Array.new(size) {Array.new(size) {Square.new(0)}}
-
     place_bombs(num_bombs)
     build_board_network
     assign_values
   end
 
   def select_square
+    render
     puts "Enter a row"
     x = gets.chomp.to_i
     puts "Enter a column"
     y = gets.chomp.to_i
-    show_square(@grid[x][y])
-    render
+    puts "Do you want to flag? (y/n)"
+    flag = gets.chomp.downcase
+    if flag == 'y'
+      flag_square(@grid[x][y])
+    elsif !@grid[x][y].flagged
+      show_square(@grid[x][y])
+    else
+      "Square is flagged"
+    end
+
+  end
+  def flag_square(square)
+    square.flag
+  end
+  def finished?
+    self.won? || self.lost?
+  end
+
+  def won?
+    @grid.each do |row|
+      row.each do |square|
+        return false if square.value != BOMB && square.revealed == false
+      end
+    end
+    @result = "won"
+    true
+  end
+
+  def lost?
+    @grid.each do |row|
+      row.each do |square|
+        if square.value == BOMB && square.revealed == true
+          @result = "lost"
+          return true
+        end
+      end
+    end
+    false
   end
 
   def show_square(square)

@@ -9,6 +9,7 @@ class Square
     @parent = nil
     @children = []
     @revealed = false
+    @flagged = false
   end
 
   def show
@@ -17,6 +18,9 @@ class Square
 
   def inspect
     return value
+  end
+  def flag
+    @flagged ? @flagged = false : @flagged = true
   end
 
 

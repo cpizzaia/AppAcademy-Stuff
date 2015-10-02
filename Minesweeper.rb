@@ -1,7 +1,5 @@
 require_relative 'Board'
+require_relative "Game"
 
-x = Board.new(20, 50)
-x.render
-while true
-  x.select_square
-end
+x = Game.new
+x.play
