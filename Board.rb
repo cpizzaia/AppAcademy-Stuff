@@ -1,4 +1,5 @@
 require_relative "square"
+require 'byebug'
 class Board
   SQUARE_DELTAS = [
     [-1,1],
@@ -10,16 +11,30 @@ class Board
     [0,-1],
     [1,-1]
   ]
+  BOMB = "*"
   def initialize(size = 4,num_bombs = 8)
-    @grid = Array.new(size) {Array.new(size) {Square.new(' ')}}
+    @grid = Array.new(size) {Array.new(size) {Square.new(0)}}
 
     place_bombs(num_bombs)
+    build_board_network
+    assign_values
   end
+
   def render
     system("clear")
     var = @grid.map do |row|
       row.map do |column|
-        column.revealed ? column.value : "#"
+        if column.revealed
+          if column.value == 0
+            " "
+          else
+            column.value
+          end
+        else
+          "#"
+        end
+
+
       end
     end
     puts var.map {|row| row.join(' ') + "\n"}
@@ -44,6 +59,26 @@ class Board
     end
   end
 
+  def assign_values
+
+    @grid.each do |row|
+      row.each do |square|
+
+        next if square.value == BOMB
+        children_array = square.children
+        children_array.each do |child|
+          square.value += 1 if child.value == BOMB
+        end
+      end
+    end
+  end
+
+
+
+
+
+
+
   def see_children(position) #debug method
     children_array = @grid[position[0]][position[1]].children
     children_array.each do |child|
@@ -60,6 +95,7 @@ class Board
     end
     result
   end
+
   def in_range?(position)
     position.first.between?(0, @grid.length-1) && position.last.between?(0, @grid.length-1)
   end
@@ -70,7 +106,7 @@ class Board
       row = rand(0..@grid.length-1)
       col = rand(0..@grid.length-1)
       if !placed_square.include? [row, col]
-        @grid[row][col].value = "*"
+        @grid[row][col].value = BOMB
         num_bombs -= 1
         placed_square << [row, col]
       end
@@ -84,6 +120,4 @@ class Board
       end
     end
   end
-
-
 end
