@@ -1,5 +1,5 @@
 class Game
-  def initialize(board = Board.new(20, 1))
+  def initialize(board = Board.new(4, 1))
     @board = board
   end
 

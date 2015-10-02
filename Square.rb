@@ -3,7 +3,7 @@ require 'byebug'
 
 class Square
   attr_accessor :value
-  attr_reader :parent, :children, :revealed
+  attr_reader :parent, :children, :revealed, :flagged
   def initialize(value)
     @value = value
     @parent = nil

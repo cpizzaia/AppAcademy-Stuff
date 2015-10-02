@@ -33,7 +33,8 @@ class Board
     elsif !@grid[x][y].flagged
       show_square(@grid[x][y])
     else
-      "Square is flagged"
+      puts "Square is flagged"
+      sleep(3)
     end
 
   end
@@ -98,6 +99,8 @@ class Board
           else
             column.value
           end
+        elsif column.flagged
+          "/"
         else
           "#"
         end
