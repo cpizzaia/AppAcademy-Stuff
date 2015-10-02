@@ -25,13 +25,29 @@ class Board
     x = gets.chomp.to_i
     puts "Enter a column"
     y = gets.chomp.to_i
-    show_square(x, y)
+    show_square(@grid[x][y])
     render
   end
 
-  def show_square(row, col)
-    @grid[row][col].show
+  def show_square(square)
+
+    if square.value != 0
+      square.show
+    elsif square.revealed
+      return nil
+
+
+    else
+      square.show
+
+      children_array = square.children
+      children_array.each do |child|
+
+        show_square(child)
+      end
+    end
   end
+
 
 
 

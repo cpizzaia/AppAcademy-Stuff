@@ -15,6 +15,10 @@ class Square
     @revealed = true
   end
 
+  def inspect
+    return value
+  end
+
 
 
 
