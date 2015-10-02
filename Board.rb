@@ -20,6 +20,21 @@ class Board
     assign_values
   end
 
+  def select_square
+    puts "Enter a row"
+    x = gets.chomp.to_i
+    puts "Enter a column"
+    y = gets.chomp.to_i
+    show_square(x, y)
+    render
+  end
+
+  def show_square(row, col)
+    @grid[row][col].show
+  end
+
+
+
   def render
     system("clear")
     var = @grid.map do |row|
@@ -33,8 +48,6 @@ class Board
         else
           "#"
         end
-
-
       end
     end
     puts var.map {|row| row.join(' ') + "\n"}
@@ -47,7 +60,6 @@ class Board
       @grid[x][y].add_child(@grid[square[0]][square[1]])
     end
   end
-
 
   def build_board_network
     (0..@grid.length-1).each do |i|

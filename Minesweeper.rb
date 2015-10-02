@@ -1,5 +1,7 @@
 require_relative 'Board'
 
-x = Board.new(20)
-x.reveal
+x = Board.new(20, 10)
 x.render
+while true
+  x.select_square
+end
