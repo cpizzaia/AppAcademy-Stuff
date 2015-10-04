@@ -1,182 +1,1289 @@
 --- !ruby/object:Board
+cursor_pos:
+- 5
+- 0
 grid:
-- - &13 !ruby/object:Square
-    value: "*"
+- - &91 !ruby/object:Square
+    value: 0
     parent: 
     children:
-    - &7 !ruby/object:Square
-      value: "*"
+    - &73 !ruby/object:Square
+      value: 0
       parent: 
       children:
-      - &5 !ruby/object:Square
-        value: 1
+      - &71 !ruby/object:Square
+        value: 0
         parent: 
         children:
-        - &1 !ruby/object:Square
+        - &53 !ruby/object:Square
           value: 0
           parent: 
           children:
-          - &2 !ruby/object:Square
-            value: 1
+          - &51 !ruby/object:Square
+            value: 0
             parent: 
             children:
-            - *1
-            - &3 !ruby/object:Square
-              value: 2
+            - &33 !ruby/object:Square
+              value: 0
               parent: 
               children:
-              - *2
-              - &4 !ruby/object:Square
-                value: 2
+              - &31 !ruby/object:Square
+                value: 0
                 parent: 
                 children:
-                - *3
-                - &6 !ruby/object:Square
-                  value: "*"
+                - &13 !ruby/object:Square
+                  value: 0
                   parent: 
                   children:
-                  - *2
-                  - *3
-                  - *4
-                  - &8 !ruby/object:Square
-                    value: 2
+                  - &11 !ruby/object:Square
+                    value: 0
                     parent: 
                     children:
-                    - *1
-                    - *2
-                    - *3
-                    - *5
-                    - *6
-                    - *7
-                    - &11 !ruby/object:Square
-                      value: 4
+                    - &1 !ruby/object:Square
+                      value: 0
                       parent: 
                       children:
-                      - *5
-                      - *8
-                      - *6
-                      - *7
-                      - &9 !ruby/object:Square
-                        value: 3
+                      - &2 !ruby/object:Square
+                        value: 0
                         parent: 
                         children:
-                        - *8
-                        - *6
-                        - &10 !ruby/object:Square
-                          value: "*"
+                        - *1
+                        - &3 !ruby/object:Square
+                          value: 0
                           parent: 
                           children:
-                          - *3
-                          - *4
-                          - *6
-                          - *9
-                          - &12 !ruby/object:Square
-                            value: 2
+                          - *2
+                          - &4 !ruby/object:Square
+                            value: 0
                             parent: 
                             children:
-                            - *6
-                            - *10
-                            - *9
-                            - &14 !ruby/object:Square
-                              value: 1
+                            - *3
+                            - &5 !ruby/object:Square
+                              value: 0
                               parent: 
                               children:
-                              - *11
-                              - *9
-                              - *12
-                              - &16 !ruby/object:Square
-                                value: "*"
+                              - *4
+                              - &6 !ruby/object:Square
+                                value: 1
                                 parent: 
                                 children:
-                                - *7
-                                - *11
-                                - *9
-                                - *13
-                                - *14
-                                revealed: false
+                                - *5
+                                - &7 !ruby/object:Square
+                                  value: "*"
+                                  parent: 
+                                  children:
+                                  - *6
+                                  - &8 !ruby/object:Square
+                                    value: 1
+                                    parent: 
+                                    children:
+                                    - *7
+                                    - &9 !ruby/object:Square
+                                      value: 0
+                                      parent: 
+                                      children:
+                                      - *8
+                                      - &10 !ruby/object:Square
+                                        value: 0
+                                        parent: 
+                                        children:
+                                        - *9
+                                        - &25 !ruby/object:Square
+                                          value: 1
+                                          parent: 
+                                          children:
+                                          - *8
+                                          - *9
+                                          - *10
+                                          - &23 !ruby/object:Square
+                                            value: 2
+                                            parent: 
+                                            children:
+                                            - *7
+                                            - *8
+                                            - *9
+                                            - &21 !ruby/object:Square
+                                              value: 2
+                                              parent: 
+                                              children:
+                                              - *6
+                                              - *7
+                                              - *8
+                                              - &19 !ruby/object:Square
+                                                value: 1
+                                                parent: 
+                                                children:
+                                                - *5
+                                                - *6
+                                                - *7
+                                                - &17 !ruby/object:Square
+                                                  value: 0
+                                                  parent: 
+                                                  children:
+                                                  - *4
+                                                  - *5
+                                                  - *6
+                                                  - &15 !ruby/object:Square
+                                                    value: 0
+                                                    parent: 
+                                                    children:
+                                                    - *3
+                                                    - *4
+                                                    - *5
+                                                    - &12 !ruby/object:Square
+                                                      value: 0
+                                                      parent: 
+                                                      children:
+                                                      - *2
+                                                      - *3
+                                                      - *4
+                                                      - &14 !ruby/object:Square
+                                                        value: 0
+                                                        parent: 
+                                                        children:
+                                                        - *1
+                                                        - *2
+                                                        - *3
+                                                        - *11
+                                                        - *12
+                                                        - *13
+                                                        - &16 !ruby/object:Square
+                                                          value: 0
+                                                          parent: 
+                                                          children:
+                                                          - *11
+                                                          - *14
+                                                          - *12
+                                                          - *13
+                                                          - &18 !ruby/object:Square
+                                                            value: 0
+                                                            parent: 
+                                                            children:
+                                                            - *14
+                                                            - *12
+                                                            - *15
+                                                            - *16
+                                                            - &20 !ruby/object:Square
+                                                              value: 0
+                                                              parent: 
+                                                              children:
+                                                              - *12
+                                                              - *15
+                                                              - *17
+                                                              - *18
+                                                              - &22 !ruby/object:Square
+                                                                value: 0
+                                                                parent: 
+                                                                children:
+                                                                - *15
+                                                                - *17
+                                                                - *19
+                                                                - *20
+                                                                - &24 !ruby/object:Square
+                                                                  value: 0
+                                                                  parent: 
+                                                                  children:
+                                                                  - *17
+                                                                  - *19
+                                                                  - *21
+                                                                  - *22
+                                                                  - &26 !ruby/object:Square
+                                                                    value: 1
+                                                                    parent: 
+                                                                    children:
+                                                                    - *19
+                                                                    - *21
+                                                                    - *23
+                                                                    - *24
+                                                                    - &29 !ruby/object:Square
+                                                                      value: "*"
+                                                                      parent: 
+                                                                      children:
+                                                                      - *21
+                                                                      - *23
+                                                                      - *25
+                                                                      - *26
+                                                                      - &27 !ruby/object:Square
+                                                                        value: 1
+                                                                        parent: 
+                                                                        children:
+                                                                        - *23
+                                                                        - *25
+                                                                        - &28 !ruby/object:Square
+                                                                          value: 0
+                                                                          parent: 
+                                                                          children:
+                                                                          - *9
+                                                                          - *10
+                                                                          - *25
+                                                                          - *27
+                                                                          - &30 !ruby/object:Square
+                                                                            value: 0
+                                                                            parent: 
+                                                                            children:
+                                                                            - *25
+                                                                            - *28
+                                                                            - *27
+                                                                            - &45 !ruby/object:Square
+                                                                              value: 1
+                                                                              parent: 
+                                                                              children:
+                                                                              - *29
+                                                                              - *27
+                                                                              - *30
+                                                                              - &43 !ruby/object:Square
+                                                                                value: 1
+                                                                                parent: 
+                                                                                children:
+                                                                                - *26
+                                                                                - *29
+                                                                                - *27
+                                                                                - &41 !ruby/object:Square
+                                                                                  value: 1
+                                                                                  parent: 
+                                                                                  children:
+                                                                                  - *24
+                                                                                  - *26
+                                                                                  - *29
+                                                                                  - &39 !ruby/object:Square
+                                                                                    value: 0
+                                                                                    parent: 
+                                                                                    children:
+                                                                                    - *22
+                                                                                    - *24
+                                                                                    - *26
+                                                                                    - &37 !ruby/object:Square
+                                                                                      value: 0
+                                                                                      parent: 
+                                                                                      children:
+                                                                                      - *20
+                                                                                      - *22
+                                                                                      - *24
+                                                                                      - &35 !ruby/object:Square
+                                                                                        value: 1
+                                                                                        parent: 
+                                                                                        children:
+                                                                                        - *18
+                                                                                        - *20
+                                                                                        - *22
+                                                                                        - &32 !ruby/object:Square
+                                                                                          value: 1
+                                                                                          parent: 
+                                                                                          children:
+                                                                                          - *16
+                                                                                          - *18
+                                                                                          - *20
+                                                                                          - &34 !ruby/object:Square
+                                                                                            value: 1
+                                                                                            parent: 
+                                                                                            children:
+                                                                                            - *13
+                                                                                            - *16
+                                                                                            - *18
+                                                                                            - *31
+                                                                                            - *32
+                                                                                            - *33
+                                                                                            - &36 !ruby/object:Square
+                                                                                              value: 1
+                                                                                              parent: 
+                                                                                              children:
+                                                                                              - *31
+                                                                                              - *34
+                                                                                              - *32
+                                                                                              - *33
+                                                                                              - &38 !ruby/object:Square
+                                                                                                value: "*"
+                                                                                                parent: 
+                                                                                                children:
+                                                                                                - *34
+                                                                                                - *32
+                                                                                                - *35
+                                                                                                - *36
+                                                                                                - &40 !ruby/object:Square
+                                                                                                  value: 1
+                                                                                                  parent: 
+                                                                                                  children:
+                                                                                                  - *32
+                                                                                                  - *35
+                                                                                                  - *37
+                                                                                                  - *38
+                                                                                                  - &42 !ruby/object:Square
+                                                                                                    value: 0
+                                                                                                    parent: 
+                                                                                                    children:
+                                                                                                    - *35
+                                                                                                    - *37
+                                                                                                    - *39
+                                                                                                    - *40
+                                                                                                    - &44 !ruby/object:Square
+                                                                                                      value: 0
+                                                                                                      parent: 
+                                                                                                      children:
+                                                                                                      - *37
+                                                                                                      - *39
+                                                                                                      - *41
+                                                                                                      - *42
+                                                                                                      - &46 !ruby/object:Square
+                                                                                                        value: 0
+                                                                                                        parent: 
+                                                                                                        children:
+                                                                                                        - *39
+                                                                                                        - *41
+                                                                                                        - *43
+                                                                                                        - *44
+                                                                                                        - &49 !ruby/object:Square
+                                                                                                          value: 0
+                                                                                                          parent: 
+                                                                                                          children:
+                                                                                                          - *41
+                                                                                                          - *43
+                                                                                                          - *45
+                                                                                                          - *46
+                                                                                                          - &47 !ruby/object:Square
+                                                                                                            value: 0
+                                                                                                            parent: 
+                                                                                                            children:
+                                                                                                            - *43
+                                                                                                            - *45
+                                                                                                            - &48 !ruby/object:Square
+                                                                                                              value: 0
+                                                                                                              parent: 
+                                                                                                              children:
+                                                                                                              - *27
+                                                                                                              - *30
+                                                                                                              - *45
+                                                                                                              - *47
+                                                                                                              - &50 !ruby/object:Square
+                                                                                                                value: 0
+                                                                                                                parent: 
+                                                                                                                children:
+                                                                                                                - *45
+                                                                                                                - *48
+                                                                                                                - *47
+                                                                                                                - &65 !ruby/object:Square
+                                                                                                                  value: 0
+                                                                                                                  parent: 
+                                                                                                                  children:
+                                                                                                                  - *49
+                                                                                                                  - *47
+                                                                                                                  - *50
+                                                                                                                  - &63 !ruby/object:Square
+                                                                                                                    value: 0
+                                                                                                                    parent: 
+                                                                                                                    children:
+                                                                                                                    - *46
+                                                                                                                    - *49
+                                                                                                                    - *47
+                                                                                                                    - &61 !ruby/object:Square
+                                                                                                                      value: 0
+                                                                                                                      parent: 
+                                                                                                                      children:
+                                                                                                                      - *44
+                                                                                                                      - *46
+                                                                                                                      - *49
+                                                                                                                      - &59 !ruby/object:Square
+                                                                                                                        value: 0
+                                                                                                                        parent: 
+                                                                                                                        children:
+                                                                                                                        - *42
+                                                                                                                        - *44
+                                                                                                                        - *46
+                                                                                                                        - &57 !ruby/object:Square
+                                                                                                                          value: 0
+                                                                                                                          parent: 
+                                                                                                                          children:
+                                                                                                                          - *40
+                                                                                                                          - *42
+                                                                                                                          - *44
+                                                                                                                          - &55 !ruby/object:Square
+                                                                                                                            value: 1
+                                                                                                                            parent: 
+                                                                                                                            children:
+                                                                                                                            - *38
+                                                                                                                            - *40
+                                                                                                                            - *42
+                                                                                                                            - &52 !ruby/object:Square
+                                                                                                                              value: 1
+                                                                                                                              parent: 
+                                                                                                                              children:
+                                                                                                                              - *36
+                                                                                                                              - *38
+                                                                                                                              - *40
+                                                                                                                              - &54 !ruby/object:Square
+                                                                                                                                value: 1
+                                                                                                                                parent: 
+                                                                                                                                children:
+                                                                                                                                - *33
+                                                                                                                                - *36
+                                                                                                                                - *38
+                                                                                                                                - *51
+                                                                                                                                - *52
+                                                                                                                                - *53
+                                                                                                                                - &56 !ruby/object:Square
+                                                                                                                                  value: 0
+                                                                                                                                  parent: 
+                                                                                                                                  children:
+                                                                                                                                  - *51
+                                                                                                                                  - *54
+                                                                                                                                  - *52
+                                                                                                                                  - *53
+                                                                                                                                  - &58 !ruby/object:Square
+                                                                                                                                    value: 0
+                                                                                                                                    parent: 
+                                                                                                                                    children:
+                                                                                                                                    - *54
+                                                                                                                                    - *52
+                                                                                                                                    - *55
+                                                                                                                                    - *56
+                                                                                                                                    - &60 !ruby/object:Square
+                                                                                                                                      value: 0
+                                                                                                                                      parent: 
+                                                                                                                                      children:
+                                                                                                                                      - *52
+                                                                                                                                      - *55
+                                                                                                                                      - *57
+                                                                                                                                      - *58
+                                                                                                                                      - &62 !ruby/object:Square
+                                                                                                                                        value: 0
+                                                                                                                                        parent: 
+                                                                                                                                        children:
+                                                                                                                                        - *55
+                                                                                                                                        - *57
+                                                                                                                                        - *59
+                                                                                                                                        - *60
+                                                                                                                                        - &64 !ruby/object:Square
+                                                                                                                                          value: 0
+                                                                                                                                          parent: 
+                                                                                                                                          children:
+                                                                                                                                          - *57
+                                                                                                                                          - *59
+                                                                                                                                          - *61
+                                                                                                                                          - *62
+                                                                                                                                          - &66 !ruby/object:Square
+                                                                                                                                            value: 0
+                                                                                                                                            parent: 
+                                                                                                                                            children:
+                                                                                                                                            - *59
+                                                                                                                                            - *61
+                                                                                                                                            - *63
+                                                                                                                                            - *64
+                                                                                                                                            - &69 !ruby/object:Square
+                                                                                                                                              value: 0
+                                                                                                                                              parent: 
+                                                                                                                                              children:
+                                                                                                                                              - *61
+                                                                                                                                              - *63
+                                                                                                                                              - *65
+                                                                                                                                              - *66
+                                                                                                                                              - &67 !ruby/object:Square
+                                                                                                                                                value: 0
+                                                                                                                                                parent: 
+                                                                                                                                                children:
+                                                                                                                                                - *63
+                                                                                                                                                - *65
+                                                                                                                                                - &68 !ruby/object:Square
+                                                                                                                                                  value: 0
+                                                                                                                                                  parent: 
+                                                                                                                                                  children:
+                                                                                                                                                  - *47
+                                                                                                                                                  - *50
+                                                                                                                                                  - *65
+                                                                                                                                                  - *67
+                                                                                                                                                  - &70 !ruby/object:Square
+                                                                                                                                                    value: 0
+                                                                                                                                                    parent: 
+                                                                                                                                                    children:
+                                                                                                                                                    - *65
+                                                                                                                                                    - *68
+                                                                                                                                                    - *67
+                                                                                                                                                    - &85 !ruby/object:Square
+                                                                                                                                                      value: 0
+                                                                                                                                                      parent: 
+                                                                                                                                                      children:
+                                                                                                                                                      - *69
+                                                                                                                                                      - *67
+                                                                                                                                                      - *70
+                                                                                                                                                      - &83 !ruby/object:Square
+                                                                                                                                                        value: 0
+                                                                                                                                                        parent: 
+                                                                                                                                                        children:
+                                                                                                                                                        - *66
+                                                                                                                                                        - *69
+                                                                                                                                                        - *67
+                                                                                                                                                        - &81 !ruby/object:Square
+                                                                                                                                                          value: 1
+                                                                                                                                                          parent: 
+                                                                                                                                                          children:
+                                                                                                                                                          - *64
+                                                                                                                                                          - *66
+                                                                                                                                                          - *69
+                                                                                                                                                          - &79 !ruby/object:Square
+                                                                                                                                                            value: 1
+                                                                                                                                                            parent: 
+                                                                                                                                                            children:
+                                                                                                                                                            - *62
+                                                                                                                                                            - *64
+                                                                                                                                                            - *66
+                                                                                                                                                            - &77 !ruby/object:Square
+                                                                                                                                                              value: 1
+                                                                                                                                                              parent: 
+                                                                                                                                                              children:
+                                                                                                                                                              - *60
+                                                                                                                                                              - *62
+                                                                                                                                                              - *64
+                                                                                                                                                              - &75 !ruby/object:Square
+                                                                                                                                                                value: 0
+                                                                                                                                                                parent: 
+                                                                                                                                                                children:
+                                                                                                                                                                - *58
+                                                                                                                                                                - *60
+                                                                                                                                                                - *62
+                                                                                                                                                                - &72 !ruby/object:Square
+                                                                                                                                                                  value: 0
+                                                                                                                                                                  parent: 
+                                                                                                                                                                  children:
+                                                                                                                                                                  - *56
+                                                                                                                                                                  - *58
+                                                                                                                                                                  - *60
+                                                                                                                                                                  - &74 !ruby/object:Square
+                                                                                                                                                                    value: 0
+                                                                                                                                                                    parent: 
+                                                                                                                                                                    children:
+                                                                                                                                                                    - *53
+                                                                                                                                                                    - *56
+                                                                                                                                                                    - *58
+                                                                                                                                                                    - *71
+                                                                                                                                                                    - *72
+                                                                                                                                                                    - *73
+                                                                                                                                                                    - &76 !ruby/object:Square
+                                                                                                                                                                      value: 0
+                                                                                                                                                                      parent: 
+                                                                                                                                                                      children:
+                                                                                                                                                                      - *71
+                                                                                                                                                                      - *74
+                                                                                                                                                                      - *72
+                                                                                                                                                                      - *73
+                                                                                                                                                                      - &78 !ruby/object:Square
+                                                                                                                                                                        value: 0
+                                                                                                                                                                        parent: 
+                                                                                                                                                                        children:
+                                                                                                                                                                        - *74
+                                                                                                                                                                        - *72
+                                                                                                                                                                        - *75
+                                                                                                                                                                        - *76
+                                                                                                                                                                        - &80 !ruby/object:Square
+                                                                                                                                                                          value: 0
+                                                                                                                                                                          parent: 
+                                                                                                                                                                          children:
+                                                                                                                                                                          - *72
+                                                                                                                                                                          - *75
+                                                                                                                                                                          - *77
+                                                                                                                                                                          - *78
+                                                                                                                                                                          - &82 !ruby/object:Square
+                                                                                                                                                                            value: 1
+                                                                                                                                                                            parent: 
+                                                                                                                                                                            children:
+                                                                                                                                                                            - *75
+                                                                                                                                                                            - *77
+                                                                                                                                                                            - *79
+                                                                                                                                                                            - *80
+                                                                                                                                                                            - &84 !ruby/object:Square
+                                                                                                                                                                              value: "*"
+                                                                                                                                                                              parent: 
+                                                                                                                                                                              children:
+                                                                                                                                                                              - *77
+                                                                                                                                                                              - *79
+                                                                                                                                                                              - *81
+                                                                                                                                                                              - *82
+                                                                                                                                                                              - &86 !ruby/object:Square
+                                                                                                                                                                                value: 2
+                                                                                                                                                                                parent: 
+                                                                                                                                                                                children:
+                                                                                                                                                                                - *79
+                                                                                                                                                                                - *81
+                                                                                                                                                                                - *83
+                                                                                                                                                                                - *84
+                                                                                                                                                                                - &89 !ruby/object:Square
+                                                                                                                                                                                  value: 1
+                                                                                                                                                                                  parent: 
+                                                                                                                                                                                  children:
+                                                                                                                                                                                  - *81
+                                                                                                                                                                                  - *83
+                                                                                                                                                                                  - *85
+                                                                                                                                                                                  - *86
+                                                                                                                                                                                  - &87 !ruby/object:Square
+                                                                                                                                                                                    value: 0
+                                                                                                                                                                                    parent: 
+                                                                                                                                                                                    children:
+                                                                                                                                                                                    - *83
+                                                                                                                                                                                    - *85
+                                                                                                                                                                                    - &88 !ruby/object:Square
+                                                                                                                                                                                      value: 0
+                                                                                                                                                                                      parent: 
+                                                                                                                                                                                      children:
+                                                                                                                                                                                      - *67
+                                                                                                                                                                                      - *70
+                                                                                                                                                                                      - *85
+                                                                                                                                                                                      - *87
+                                                                                                                                                                                      - &90 !ruby/object:Square
+                                                                                                                                                                                        value: 0
+                                                                                                                                                                                        parent: 
+                                                                                                                                                                                        children:
+                                                                                                                                                                                        - *85
+                                                                                                                                                                                        - *88
+                                                                                                                                                                                        - *87
+                                                                                                                                                                                        - &98 !ruby/object:Square
+                                                                                                                                                                                          value: 0
+                                                                                                                                                                                          parent: 
+                                                                                                                                                                                          children:
+                                                                                                                                                                                          - *89
+                                                                                                                                                                                          - *87
+                                                                                                                                                                                          - *90
+                                                                                                                                                                                          - &97 !ruby/object:Square
+                                                                                                                                                                                            value: 1
+                                                                                                                                                                                            parent: 
+                                                                                                                                                                                            children:
+                                                                                                                                                                                            - *86
+                                                                                                                                                                                            - *89
+                                                                                                                                                                                            - *87
+                                                                                                                                                                                            - &96 !ruby/object:Square
+                                                                                                                                                                                              value: "*"
+                                                                                                                                                                                              parent: 
+                                                                                                                                                                                              children:
+                                                                                                                                                                                              - *84
+                                                                                                                                                                                              - *86
+                                                                                                                                                                                              - *89
+                                                                                                                                                                                              - &95 !ruby/object:Square
+                                                                                                                                                                                                value: 2
+                                                                                                                                                                                                parent: 
+                                                                                                                                                                                                children:
+                                                                                                                                                                                                - *82
+                                                                                                                                                                                                - *84
+                                                                                                                                                                                                - *86
+                                                                                                                                                                                                - &94 !ruby/object:Square
+                                                                                                                                                                                                  value: 1
+                                                                                                                                                                                                  parent: 
+                                                                                                                                                                                                  children:
+                                                                                                                                                                                                  - *80
+                                                                                                                                                                                                  - *82
+                                                                                                                                                                                                  - *84
+                                                                                                                                                                                                  - &93 !ruby/object:Square
+                                                                                                                                                                                                    value: 0
+                                                                                                                                                                                                    parent: 
+                                                                                                                                                                                                    children:
+                                                                                                                                                                                                    - *78
+                                                                                                                                                                                                    - *80
+                                                                                                                                                                                                    - *82
+                                                                                                                                                                                                    - &92 !ruby/object:Square
+                                                                                                                                                                                                      value: 0
+                                                                                                                                                                                                      parent: 
+                                                                                                                                                                                                      children:
+                                                                                                                                                                                                      - *76
+                                                                                                                                                                                                      - *78
+                                                                                                                                                                                                      - *80
+                                                                                                                                                                                                      - &100 !ruby/object:Square
+                                                                                                                                                                                                        value: 0
+                                                                                                                                                                                                        parent: 
+                                                                                                                                                                                                        children:
+                                                                                                                                                                                                        - *73
+                                                                                                                                                                                                        - *76
+                                                                                                                                                                                                        - *78
+                                                                                                                                                                                                        - *91
+                                                                                                                                                                                                        - *92
+                                                                                                                                                                                                        revealed: true
+                                                                                                                                                                                                        flagged: false
+                                                                                                                                                                                                      - *93
+                                                                                                                                                                                                      revealed: true
+                                                                                                                                                                                                      flagged: false
+                                                                                                                                                                                                    - *94
+                                                                                                                                                                                                    revealed: true
+                                                                                                                                                                                                    flagged: false
+                                                                                                                                                                                                  - *95
+                                                                                                                                                                                                  revealed: true
+                                                                                                                                                                                                  flagged: false
+                                                                                                                                                                                                - *96
+                                                                                                                                                                                                revealed: true
+                                                                                                                                                                                                flagged: false
+                                                                                                                                                                                              - *97
+                                                                                                                                                                                              revealed: false
+                                                                                                                                                                                              flagged: false
+                                                                                                                                                                                            - *98
+                                                                                                                                                                                            revealed: true
+                                                                                                                                                                                            flagged: false
+                                                                                                                                                                                          - &99 !ruby/object:Square
+                                                                                                                                                                                            value: 0
+                                                                                                                                                                                            parent: 
+                                                                                                                                                                                            children:
+                                                                                                                                                                                            - *87
+                                                                                                                                                                                            - *90
+                                                                                                                                                                                            - *98
+                                                                                                                                                                                            revealed: true
+                                                                                                                                                                                            flagged: false
+                                                                                                                                                                                          revealed: true
+                                                                                                                                                                                          flagged: false
+                                                                                                                                                                                        - *99
+                                                                                                                                                                                        revealed: true
+                                                                                                                                                                                        flagged: false
+                                                                                                                                                                                      revealed: true
+                                                                                                                                                                                      flagged: false
+                                                                                                                                                                                    - *89
+                                                                                                                                                                                    - *90
+                                                                                                                                                                                    - *97
+                                                                                                                                                                                    - *98
+                                                                                                                                                                                    - *99
+                                                                                                                                                                                    revealed: true
+                                                                                                                                                                                    flagged: false
+                                                                                                                                                                                  - *96
+                                                                                                                                                                                  - *97
+                                                                                                                                                                                  - *98
+                                                                                                                                                                                  revealed: true
+                                                                                                                                                                                  flagged: false
+                                                                                                                                                                                - *95
+                                                                                                                                                                                - *96
+                                                                                                                                                                                - *97
+                                                                                                                                                                                revealed: true
+                                                                                                                                                                                flagged: false
+                                                                                                                                                                              - *94
+                                                                                                                                                                              - *95
+                                                                                                                                                                              - *96
+                                                                                                                                                                              revealed: false
+                                                                                                                                                                              flagged: false
+                                                                                                                                                                            - *93
+                                                                                                                                                                            - *94
+                                                                                                                                                                            - *95
+                                                                                                                                                                            revealed: true
+                                                                                                                                                                            flagged: false
+                                                                                                                                                                          - *92
+                                                                                                                                                                          - *93
+                                                                                                                                                                          - *94
+                                                                                                                                                                          revealed: true
+                                                                                                                                                                          flagged: false
+                                                                                                                                                                        - *100
+                                                                                                                                                                        - *92
+                                                                                                                                                                        - *93
+                                                                                                                                                                        revealed: true
+                                                                                                                                                                        flagged: false
+                                                                                                                                                                      - *91
+                                                                                                                                                                      - *100
+                                                                                                                                                                      - *92
+                                                                                                                                                                      revealed: true
+                                                                                                                                                                      flagged: false
+                                                                                                                                                                    - *78
+                                                                                                                                                                    revealed: true
+                                                                                                                                                                    flagged: false
+                                                                                                                                                                  - *75
+                                                                                                                                                                  - *76
+                                                                                                                                                                  - *78
+                                                                                                                                                                  - *80
+                                                                                                                                                                  revealed: true
+                                                                                                                                                                  flagged: false
+                                                                                                                                                                - *77
+                                                                                                                                                                - *78
+                                                                                                                                                                - *80
+                                                                                                                                                                - *82
+                                                                                                                                                                revealed: true
+                                                                                                                                                                flagged: false
+                                                                                                                                                              - *79
+                                                                                                                                                              - *80
+                                                                                                                                                              - *82
+                                                                                                                                                              - *84
+                                                                                                                                                              revealed: true
+                                                                                                                                                              flagged: false
+                                                                                                                                                            - *81
+                                                                                                                                                            - *82
+                                                                                                                                                            - *84
+                                                                                                                                                            - *86
+                                                                                                                                                            revealed: true
+                                                                                                                                                            flagged: false
+                                                                                                                                                          - *83
+                                                                                                                                                          - *84
+                                                                                                                                                          - *86
+                                                                                                                                                          - *89
+                                                                                                                                                          revealed: true
+                                                                                                                                                          flagged: false
+                                                                                                                                                        - *85
+                                                                                                                                                        - *86
+                                                                                                                                                        - *89
+                                                                                                                                                        - *87
+                                                                                                                                                        revealed: true
+                                                                                                                                                        flagged: false
+                                                                                                                                                      - *88
+                                                                                                                                                      - *89
+                                                                                                                                                      - *87
+                                                                                                                                                      - *90
+                                                                                                                                                      revealed: true
+                                                                                                                                                      flagged: false
+                                                                                                                                                    - *88
+                                                                                                                                                    revealed: true
+                                                                                                                                                    flagged: false
+                                                                                                                                                  revealed: true
+                                                                                                                                                  flagged: false
+                                                                                                                                                - *69
+                                                                                                                                                - *70
+                                                                                                                                                - *83
+                                                                                                                                                - *85
+                                                                                                                                                - *88
+                                                                                                                                                revealed: true
+                                                                                                                                                flagged: false
+                                                                                                                                              - *81
+                                                                                                                                              - *83
+                                                                                                                                              - *85
+                                                                                                                                              revealed: true
+                                                                                                                                              flagged: false
+                                                                                                                                            - *79
+                                                                                                                                            - *81
+                                                                                                                                            - *83
+                                                                                                                                            revealed: true
+                                                                                                                                            flagged: false
+                                                                                                                                          - *77
+                                                                                                                                          - *79
+                                                                                                                                          - *81
+                                                                                                                                          revealed: true
+                                                                                                                                          flagged: false
+                                                                                                                                        - *75
+                                                                                                                                        - *77
+                                                                                                                                        - *79
+                                                                                                                                        revealed: true
+                                                                                                                                        flagged: false
+                                                                                                                                      - *72
+                                                                                                                                      - *75
+                                                                                                                                      - *77
+                                                                                                                                      revealed: true
+                                                                                                                                      flagged: false
+                                                                                                                                    - *74
+                                                                                                                                    - *72
+                                                                                                                                    - *75
+                                                                                                                                    revealed: true
+                                                                                                                                    flagged: false
+                                                                                                                                  - *71
+                                                                                                                                  - *74
+                                                                                                                                  - *72
+                                                                                                                                  revealed: true
+                                                                                                                                  flagged: false
+                                                                                                                                - *58
+                                                                                                                                revealed: true
+                                                                                                                                flagged: false
+                                                                                                                              - *55
+                                                                                                                              - *56
+                                                                                                                              - *58
+                                                                                                                              - *60
+                                                                                                                              revealed: true
+                                                                                                                              flagged: false
+                                                                                                                            - *57
+                                                                                                                            - *58
+                                                                                                                            - *60
+                                                                                                                            - *62
+                                                                                                                            revealed: true
+                                                                                                                            flagged: false
+                                                                                                                          - *59
+                                                                                                                          - *60
+                                                                                                                          - *62
+                                                                                                                          - *64
+                                                                                                                          revealed: true
+                                                                                                                          flagged: false
+                                                                                                                        - *61
+                                                                                                                        - *62
+                                                                                                                        - *64
+                                                                                                                        - *66
+                                                                                                                        revealed: true
+                                                                                                                        flagged: false
+                                                                                                                      - *63
+                                                                                                                      - *64
+                                                                                                                      - *66
+                                                                                                                      - *69
+                                                                                                                      revealed: true
+                                                                                                                      flagged: false
+                                                                                                                    - *65
+                                                                                                                    - *66
+                                                                                                                    - *69
+                                                                                                                    - *67
+                                                                                                                    revealed: true
+                                                                                                                    flagged: false
+                                                                                                                  - *68
+                                                                                                                  - *69
+                                                                                                                  - *67
+                                                                                                                  - *70
+                                                                                                                  revealed: true
+                                                                                                                  flagged: false
+                                                                                                                - *68
+                                                                                                                revealed: true
+                                                                                                                flagged: false
+                                                                                                              revealed: true
+                                                                                                              flagged: false
+                                                                                                            - *49
+                                                                                                            - *50
+                                                                                                            - *63
+                                                                                                            - *65
+                                                                                                            - *68
+                                                                                                            revealed: true
+                                                                                                            flagged: false
+                                                                                                          - *61
+                                                                                                          - *63
+                                                                                                          - *65
+                                                                                                          revealed: true
+                                                                                                          flagged: false
+                                                                                                        - *59
+                                                                                                        - *61
+                                                                                                        - *63
+                                                                                                        revealed: true
+                                                                                                        flagged: false
+                                                                                                      - *57
+                                                                                                      - *59
+                                                                                                      - *61
+                                                                                                      revealed: true
+                                                                                                      flagged: false
+                                                                                                    - *55
+                                                                                                    - *57
+                                                                                                    - *59
+                                                                                                    revealed: true
+                                                                                                    flagged: false
+                                                                                                  - *52
+                                                                                                  - *55
+                                                                                                  - *57
+                                                                                                  revealed: true
+                                                                                                  flagged: false
+                                                                                                - *54
+                                                                                                - *52
+                                                                                                - *55
+                                                                                                revealed: false
+                                                                                                flagged: false
+                                                                                              - *51
+                                                                                              - *54
+                                                                                              - *52
+                                                                                              revealed: true
+                                                                                              flagged: false
+                                                                                            - *38
+                                                                                            revealed: true
+                                                                                            flagged: false
+                                                                                          - *35
+                                                                                          - *36
+                                                                                          - *38
+                                                                                          - *40
+                                                                                          revealed: true
+                                                                                          flagged: false
+                                                                                        - *37
+                                                                                        - *38
+                                                                                        - *40
+                                                                                        - *42
+                                                                                        revealed: true
+                                                                                        flagged: false
+                                                                                      - *39
+                                                                                      - *40
+                                                                                      - *42
+                                                                                      - *44
+                                                                                      revealed: true
+                                                                                      flagged: false
+                                                                                    - *41
+                                                                                    - *42
+                                                                                    - *44
+                                                                                    - *46
+                                                                                    revealed: true
+                                                                                    flagged: false
+                                                                                  - *43
+                                                                                  - *44
+                                                                                  - *46
+                                                                                  - *49
+                                                                                  revealed: true
+                                                                                  flagged: false
+                                                                                - *45
+                                                                                - *46
+                                                                                - *49
+                                                                                - *47
+                                                                                revealed: true
+                                                                                flagged: false
+                                                                              - *48
+                                                                              - *49
+                                                                              - *47
+                                                                              - *50
+                                                                              revealed: true
+                                                                              flagged: false
+                                                                            - *48
+                                                                            revealed: true
+                                                                            flagged: false
+                                                                          revealed: true
+                                                                          flagged: false
+                                                                        - *29
+                                                                        - *30
+                                                                        - *43
+                                                                        - *45
+                                                                        - *48
+                                                                        revealed: true
+                                                                        flagged: false
+                                                                      - *41
+                                                                      - *43
+                                                                      - *45
+                                                                      revealed: false
+                                                                      flagged: false
+                                                                    - *39
+                                                                    - *41
+                                                                    - *43
+                                                                    revealed: true
+                                                                    flagged: false
+                                                                  - *37
+                                                                  - *39
+                                                                  - *41
+                                                                  revealed: true
+                                                                  flagged: false
+                                                                - *35
+                                                                - *37
+                                                                - *39
+                                                                revealed: true
+                                                                flagged: false
+                                                              - *32
+                                                              - *35
+                                                              - *37
+                                                              revealed: true
+                                                              flagged: false
+                                                            - *34
+                                                            - *32
+                                                            - *35
+                                                            revealed: true
+                                                            flagged: false
+                                                          - *31
+                                                          - *34
+                                                          - *32
+                                                          revealed: true
+                                                          flagged: false
+                                                        - *18
+                                                        revealed: true
+                                                        flagged: false
+                                                      - *15
+                                                      - *16
+                                                      - *18
+                                                      - *20
+                                                      revealed: true
+                                                      flagged: false
+                                                    - *17
+                                                    - *18
+                                                    - *20
+                                                    - *22
+                                                    revealed: true
+                                                    flagged: false
+                                                  - *19
+                                                  - *20
+                                                  - *22
+                                                  - *24
+                                                  revealed: true
+                                                  flagged: false
+                                                - *21
+                                                - *22
+                                                - *24
+                                                - *26
+                                                revealed: true
+                                                flagged: false
+                                              - *23
+                                              - *24
+                                              - *26
+                                              - *29
+                                              revealed: true
+                                              flagged: false
+                                            - *25
+                                            - *26
+                                            - *29
+                                            - *27
+                                            revealed: true
+                                            flagged: false
+                                          - *28
+                                          - *29
+                                          - *27
+                                          - *30
+                                          revealed: true
+                                          flagged: false
+                                        - *28
+                                        revealed: true
+                                        flagged: false
+                                      - *23
+                                      - *25
+                                      - *28
+                                      revealed: true
+                                      flagged: false
+                                    - *21
+                                    - *23
+                                    - *25
+                                    revealed: true
+                                    flagged: false
+                                  - *19
+                                  - *21
+                                  - *23
+                                  revealed: false
+                                  flagged: false
+                                - *17
+                                - *19
+                                - *21
+                                revealed: true
                                 flagged: false
-                              - &15 !ruby/object:Square
-                                value: 0
-                                parent: 
-                                children:
-                                - *9
-                                - *12
-                                - *14
-                                revealed: false
-                                flagged: false
-                              revealed: false
+                              - *15
+                              - *17
+                              - *19
+                              revealed: true
                               flagged: false
+                            - *12
                             - *15
-                            revealed: false
+                            - *17
+                            revealed: true
                             flagged: false
-                          revealed: false
+                          - *14
+                          - *12
+                          - *15
+                          revealed: true
                           flagged: false
                         - *11
-                        - *12
-                        - *16
                         - *14
-                        - *15
-                        revealed: false
+                        - *12
+                        revealed: true
                         flagged: false
-                      - *13
-                      - *16
+                      - *11
                       - *14
-                      revealed: false
+                      revealed: true
                       flagged: false
-                    - *9
-                    revealed: false
+                    - *2
+                    - *14
+                    - *13
+                    - *16
+                    revealed: true
                     flagged: false
-                  - *10
-                  - *11
-                  - *9
-                  - *12
-                  revealed: false
+                  - *14
+                  - *16
+                  - *31
+                  - *34
+                  revealed: true
                   flagged: false
-                - *10
-                revealed: false
+                - *16
+                - *34
+                - *33
+                - *36
+                revealed: true
                 flagged: false
-              - *8
-              - *6
-              - *10
-              revealed: false
+              - *34
+              - *36
+              - *51
+              - *54
+              revealed: true
               flagged: false
-            - *5
-            - *8
-            - *6
-            revealed: false
+            - *36
+            - *54
+            - *53
+            - *56
+            revealed: true
             flagged: false
-          - *5
-          - *8
-          revealed: false
+          - *54
+          - *56
+          - *71
+          - *74
+          revealed: true
           flagged: false
-        - *2
-        - *8
-        - *7
-        - *11
-        revealed: false
+        - *56
+        - *74
+        - *73
+        - *76
+        revealed: true
         flagged: false
-      - *8
-      - *11
-      - *13
-      - *16
-      revealed: false
+      - *74
+      - *76
+      - *91
+      - *100
+      revealed: true
       flagged: false
-    - *11
-    - *16
+    - *76
+    - *100
     revealed: true
     flagged: false
-  - *7
-  - *5
-  - *1
-- - *16
+  - *73
+  - *71
+  - *53
+  - *51
+  - *33
+  - *31
+  - *13
   - *11
-  - *8
+  - *1
+- - *100
+  - *76
+  - *74
+  - *56
+  - *54
+  - *36
+  - *34
+  - *16
+  - *14
   - *2
-- - *14
-  - *9
-  - *6
-  - *3
-- - *15
+- - *92
+  - *78
+  - *72
+  - *58
+  - *52
+  - *38
+  - *32
+  - *18
   - *12
-  - *10
+  - *3
+- - *93
+  - *80
+  - *75
+  - *60
+  - *55
+  - *40
+  - *35
+  - *20
+  - *15
   - *4
+- - *94
+  - *82
+  - *77
+  - *62
+  - *57
+  - *42
+  - *37
+  - *22
+  - *17
+  - *5
+- - *95
+  - *84
+  - *79
+  - *64
+  - *59
+  - *44
+  - *39
+  - *24
+  - *19
+  - *6
+- - *96
+  - *86
+  - *81
+  - *66
+  - *61
+  - *46
+  - *41
+  - *26
+  - *21
+  - *7
+- - *97
+  - *89
+  - *83
+  - *69
+  - *63
+  - *49
+  - *43
+  - *29
+  - *23
+  - *8
+- - *98
+  - *87
+  - *85
+  - *67
+  - *65
+  - *47
+  - *45
+  - *27
+  - *25
+  - *9
+- - *99
+  - *90
+  - *88
+  - *70
+  - *68
+  - *50
+  - *48
+  - *30
+  - *28
+  - *10

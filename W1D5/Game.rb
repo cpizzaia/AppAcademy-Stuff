@@ -2,7 +2,7 @@ require_relative 'board'
 class Game
   def initialize(file_name = nil)
     if file_name.nil?
-      @board = Board.new(4, 5)
+      @board = Board.new(10, 5)
     else
       load_game(file_name)
     end

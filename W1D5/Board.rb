@@ -1,7 +1,10 @@
 require_relative "square"
+require_relative "cursorable"
 require 'byebug'
 require "yaml"
+require "colorize"
 class Board
+  include Cursorable
   SQUARE_DELTAS = [
     [-1,1],
     [0,1],
@@ -15,18 +18,30 @@ class Board
   BOMB = "*"
   attr_reader :result
   def initialize(size = 4,num_bombs = 8)
+    @cursor_pos = [0,0]
     @grid = Array.new(size) {Array.new(size) {Square.new(0)}}
     place_bombs(num_bombs)
     build_board_network
     assign_values
   end
 
+  def in_bounds?(pos)
+    pos.all? { |x| x.between?(0, @grid.length-1) }
+  end
+
   def select_square
-    render
-    puts "Enter a row"
-    x = gets.chomp.to_i
-    puts "Enter a column"
-    y = gets.chomp.to_i
+    x = nil
+    while x.nil?
+      self.render(@cursor_pos)
+      puts "Select a position"
+      x, y = get_input
+    end
+
+
+    # puts "Enter a row"
+    # x = gets.chomp.to_i
+    # puts "Enter a column"
+    # y = gets.chomp.to_i
     puts "Do you want to flag? (y/n)"
     flag = gets.chomp.downcase
     if flag == 'y'
@@ -87,24 +102,25 @@ class Board
     end
   end
 
-  def render
+  def render(pos = [0,0])
+    x, y = pos
     system("clear")
-    var = @grid.map do |row|
-      row.map do |column|
+    var = @grid.map.with_index do |row, i|
+      row.map.with_index do |column, j|
         if column.revealed
           if column.value == 0
-            " "
+            x == i && y == j ? "   ".colorize(background: :red) : "   "
           else
-            column.value
+            x == i && y == j ? " #{column.value} ".colorize(background: :red, color: :white) : " #{column.value} ".colorize(color: :black)
           end
         elsif column.flagged
-          "/"
+          x == i && y == j ? " \u2691 ".colorize(background: :red, color: :white) : " \u2691 ".colorize(color: :red)
         else
-          "#"
+          x == i && y == j ? "   ".colorize(background: :red) : "   ".colorize(background: :black)
         end
       end
     end
-    puts var.map {|row| row.join(' ') + "\n"}
+    puts var.map {|row| row.join('') + "\n"}
   end
 
   def squares_to_children(current_position, nearby_squares)
