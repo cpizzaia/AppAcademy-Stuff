@@ -1,0 +1,6 @@
+<h1> <%= @track.title %> </h1>
+
+<p>Type: <%= @track.track_type %> </p>
+<p>Lyrics: <%= @track.lyrics %> </p>
+
+<a href="<%= album_url(@track.album_id) %>"> << Back to Tracks </a>

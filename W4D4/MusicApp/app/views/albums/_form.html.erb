@@ -1,0 +1,23 @@
+<% action_url = @album.persisted? ? album_url(@album) : band_albums_url(@album.band_id, @album) %>
+<% form_method = @album.persisted? ? "PATCH" : "POST" %>
+<% submit_text = @album.persisted? ? "Edit Band" : "Create Band" %>
+
+<form method="POST" action="<%= action_url %>">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="<%= form_method %>">
+
+  <label> Enter a name
+    <input type="text" name="album[title]" value="">
+  </label>
+
+  <p>
+    <label for="recording-type"> Recording Type
+    <input type="radio" name="album[recording_type]" value="Live" <%= "checked" if @album.recording_type == "Live"%>> Live
+    <input type="radio" name="album[recording_type]" value="Studio" <%= "checked" if @album.recording_type == "Studio"%>> Studio
+    </label>
+  </p>
+
+  <input type="hidden" name="album[band_id]" value="<%= @album.band_id %>">
+  <button> Submit </button>
+
+</form>
