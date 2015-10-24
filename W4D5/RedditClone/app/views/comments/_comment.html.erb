@@ -1,0 +1,26 @@
+<form action="<%= comments_url %>" method="POST">
+  <%= auth_token %>
+
+  <ul>
+  <% @comment.comments.each do |child| %>
+    <li><a href="<%= comment_url(child) %>"><%= child.content %></a></li>
+  <% end %>
+  </ul>
+
+  <label>New Comment
+    <textarea name="comment[content]"></textarea>
+  </label>
+
+
+  <input type="hidden" name="comment[post_id]" value="<%= @comment.post_id%>">
+  <input type="hidden" name="comment[parent_comment_id]" value="<%= @comment.id %>">
+
+  <button>Submit</button>
+
+  <% if @comment.parent_comment_id %>
+    <p><a href="<%= comment_url(@comment.parent_comment_id) %>">Back to parent comment </a></p>
+  <% end %>
+
+  <p><a href="<%= post_url(@comment.post_id) %>">Back to Post </a></p>
+
+</form>

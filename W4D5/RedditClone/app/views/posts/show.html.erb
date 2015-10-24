@@ -1,0 +1,22 @@
+<h1> <%= @post.title %></h1>
+
+<p><%= @post.url %></p>
+
+<p><<<================================>>></p>
+<h2> <%= @post.content %></h2>
+<p><<<================================>>></p>
+<% @post.top_level_comments.each do |comment| %>
+  <p>>><a href="<%= comment_url(comment)%>"><%= comment.content %></a></p>
+<% end %>
+
+<p><a href="<%= posts_url %>">Back to all posts </a></p>
+<p><a href="<%= edit_post_url(@post) %>">Edit Post</a></p>
+
+<form method="POST" action="<%= post_url(@post) %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <%= auth_token %>
+  <button>DESTROY</button>
+</form>
+
+
+<%= render "comments/form" %>
