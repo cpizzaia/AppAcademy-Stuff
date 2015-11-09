@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Clock</title>
+    <script src="https://fb.me/react-0.13.3.js" charset="utf-8"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js" charset="utf-8"></script>
+    <script src="./WeatherClock.jsx" type="text/jsx"></script>
+  </head>
+  <body>
+
+    <div id="clock"></div>
+    <div id="weather"></div>
+    <script type="text/jsx">
+      React.render(
+        <Clock />,
+        document.getElementById("clock")
+      )
+      React.render(
+        <Weather />,
+        document.getElementById("weather")
+      )
+    </script>
+  </body>
+</html>

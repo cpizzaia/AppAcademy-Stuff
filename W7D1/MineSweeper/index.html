@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Minesweeper</title>
+    <script src="https://fb.me/react-0.13.3.js" charset="utf-8"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js" charset="utf-8"></script>
+    <script src="./minesweeper.js" type="text/jsx"></script>
+    <script src="./application.js" type="text/jsx"></script>
+    <link rel="stylesheet" href="application.css" type="text/css">
+  </head>
+  <body>
+    <h1 class="game-title">Minesweeper</h1>
+    <section id="minesweeper"></section>
+
+    <script type="text/jsx">
+      React.render(
+        <MinesweeperGame />,
+        document.getElementById("minesweeper")
+      )
+    </script>
+  </body>
+</html>

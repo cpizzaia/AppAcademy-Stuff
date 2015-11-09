@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tabs</title>
+    <script src="https://fb.me/react-0.13.3.js" charset="utf-8"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js" charset="utf-8"></script>
+    <script src="./Tabs.jsx" type="text/jsx"></script>
+  </head>
+  <body>
+
+    <div id="tabs"></div>
+
+    <script type="text/jsx">
+      var items = [{
+        title: "Cody",
+        content: "awesome amazing everything that is great"
+      },
+      {
+        title: "Justin",
+        content: "awesything that is great"
+      }];
+      React.render(
+        <Tabs items={items}/>,
+        document.getElementById("tabs")
+      )
+
+    </script>
+  </body>
+</html>
