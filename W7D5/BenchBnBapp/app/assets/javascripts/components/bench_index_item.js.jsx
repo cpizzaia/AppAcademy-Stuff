@@ -11,7 +11,7 @@ var BenchesIndexItem = React.createClass({
     this.setState({class: "black"});
   },
 
-  _changed:
+
 
 
 
