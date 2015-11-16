@@ -1,4 +1,5 @@
 var Map = React.createClass({
+
   getInitialState: function(){
     return {benches: {}, allMarkers: []};
   },
@@ -21,10 +22,20 @@ var Map = React.createClass({
         "northEast": {"lat": northEast.lat(), "lng": northEast.lng()},
         "southWest": {"lat": southWest.lat(), "lng": southWest.lng()}
       };
-      BenchStore.fetch(bounds);
+      FilterParamsStore.addFilter({bounds: bounds});
+      BenchStore.fetch();
+    }.bind(this));
+
+    this.map.addListener('click', function(e){
+      this.props.clickMapHandler(e.latLng);
     }.bind(this));
     BenchStore.addChangeListener(this._changed);
   },
+
+  componentWillUnmount: function(){
+    BenchStore.removeChangeListener(this._changed);
+  },
+
 
   _changed: function(){
     var markers = [];

@@ -1,23 +1,17 @@
 var BenchesIndexItem = React.createClass({
+
+  mixins: [ReactRouter.History],
+
   getInitialState: function(){
     return {class: "black"};
   },
 
-  turnRed: function(){
-    this.setState({class: "red"});
+  handleClick: function(){
+    this.history.pushState(null, "/benches/" + this.props.bench.id);
   },
-
-  turnBlack: function(){
-    this.setState({class: "black"});
-  },
-
-
-
-
 
   render: function(){
-
-    return <h1 className={this.state.class} onMouseEnter={this.turnRed} onMouseLeave={this.turnBlack}>{this.props.bench.description}</h1>;
+    return <h1 onClick={this.handleClick} className={this.state.class}>{this.props.bench.description} Seats: {this.props.bench.seating}</h1>;
   }
 
 });

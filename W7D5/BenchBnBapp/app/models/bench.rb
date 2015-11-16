@@ -1,8 +1,8 @@
 class Bench < ActiveRecord::Base
   validates :description, :lat, :lng, presence: true;
 
-  def self.in_bounds(bounds)
-    benches = self.all
+  def self.in_bounds(bounds, seating = nil)
+    seating == nil ? benches = self.all : benches = self.all.where("seating >=" + seating)
     neb = bounds["northEast"]
     seb = bounds["southWest"]
     results = []

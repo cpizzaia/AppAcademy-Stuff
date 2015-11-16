@@ -36,8 +36,16 @@
     return _benches.slice();
   };
 
-  BenchStore.fetch = function(bounds){
-    ApiUtil.fetchAllBenches(bounds);
+  BenchStore.fetch = function(){
+    ApiUtil.fetchAllBenches();
+  };
+
+  BenchStore.findById = function(id){
+    for (var i = 0; i < _benches.length; i++){
+      if (_benches[i].id === id){
+        return _benches[i];
+      }
+    }
   };
 
 
