@@ -24,8 +24,6 @@ var BenchForm = React.createClass({
     this.setState({seating: this.state.seating - 1});
   },
 
-
-
   render: function(){
     return(
       <form>
